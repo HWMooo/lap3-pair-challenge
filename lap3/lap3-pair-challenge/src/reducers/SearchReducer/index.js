@@ -12,5 +12,7 @@ export function SearchReducer(state=initState, action) {
             return {...state, username: action.payload.username, repos: action.payload.repos, loading: true, error: false}
         case "SET_ERROR":
             return {...state, error: action.payload, loading: false}
+        default: 
+            return state;
     }
 }

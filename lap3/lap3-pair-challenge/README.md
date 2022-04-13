@@ -41,12 +41,18 @@
 
 ## Bugs
 
+- 403 forbidden error when submitting github username (therefore nothing renders on page)
+
 
 ## Wins and Challenges
 
 ### Wins
 
+- Almost functioning app
+
 ### Challenges
+
+- Accessing github api's
 
 
 ### Authors

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { getRepos } from '../../actions'
+import { useDispatch } from 'react-redux'
 
 export function Form() {
 
-    let [userName, setUsername] = useState('')
+    const [userName, setUsername] = useState('')
+    let [repos, setRepos] = useState([])
+    const dispatch = useDispatch()
 
-    let handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-        setUsername('')
-        console.log('submitted')
+        dispatch(getRepos(userName))
+        console.log(`Username is: ${userName}`)
     }
 
     const updateInput = e => {
@@ -16,8 +20,8 @@ export function Form() {
     
     return (
         <form onSubmit={handleSubmit}>
-            <label>Username:</label>
-            <input type='text' name='text' value={userName} onChange={updateInput}></input>
+            <label htmlFor='userInput'>Username:</label>
+            <input type='text' id='userInput' name='text' value={userName} onChange={updateInput}></input>
             <input type="submit"></input>
         </form>
     )
