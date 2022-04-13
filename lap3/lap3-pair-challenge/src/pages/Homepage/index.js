@@ -8,8 +8,8 @@ export function Homepage() {
     return (
         <>
 
-            < Form/>
-            {/* <Repos /> */}
+            {/* < Form/> */}
+            <Repos />
 
         </>
     )

@@ -11,7 +11,7 @@ export function Repos() {
     const error = useSelector(state => state.error);
 
     const dispatch = useDispatch();
-    dispatch(getRepos(repos))
+   
 
     const search = searchUser => dispatch(getRepos(searchUser))
 
@@ -19,7 +19,7 @@ export function Repos() {
 
     return(
         <>
-        {/* <Form getRepos={search}/> */}
+        <Form getRepos={search}/>
 
         { error ? <p>oops error occured {error}</p> : renderRepo()}
 
