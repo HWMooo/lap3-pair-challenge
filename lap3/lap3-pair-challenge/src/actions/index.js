@@ -14,7 +14,7 @@ export const getRepos = searchUser => {
     return async dispatch => {
         dispatch(loading(searchUser));
         try {
-            const {data} = await axios.get(`https://cors-anywhere.herokuapp.com/api.github.com/users/${searchUser}/repos`
+            const {data} = await axios.get(`https://api.github.com/users/${searchUser}/repos`
             // ,{
             //     credentials: 'include',
             //     method: 'POST',
@@ -22,12 +22,13 @@ export const getRepos = searchUser => {
             //     body: JSON.stringify(data)
             // }}
             );
-            let fetchedData = JSON.stringify(data)
-            console.log(fetchedData.data.name)
-            return fetchedData
+            //let fetchedData = JSON.stringify(data)
+            console.log(data)
+            dispatch(loadRepos(data));
         } catch (err) {
             console.warn(err.message);
             dispatch({ type: 'SET_ERROR', payload: err.message})
+            console.log('searchUser is ', searchUser)
         }
     }
 }

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { getRepos } from '../../actions'
 import { useDispatch } from 'react-redux'
 import './style.css'
 
-export function Form() {
+export function Form({getRepos}) {
 
     const [userName, setUsername] = useState('')
     let [repos, setRepos] = useState([])
@@ -11,7 +10,7 @@ export function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(getRepos(userName))
+        getRepos(userName);
         console.log(`Username is: ${userName}`)
     }
 
