@@ -1,0 +1,6 @@
+nav {
+    background-image: linear-gradient(to right, #667ed7, #6a4075);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 100vw;
+}

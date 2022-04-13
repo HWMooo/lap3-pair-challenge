@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getRepos } from '../../actions'
 import { useDispatch } from 'react-redux'
+import './style.css'
 
 export function Form() {
 
