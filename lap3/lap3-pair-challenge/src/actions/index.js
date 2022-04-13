@@ -11,7 +11,7 @@ export const getRepos = searchUser => {
     return async dispatch => {
         dispatch(loading(searchUser));
         try {
-            const {data} = await axios.get(`https://api.github.com/${searchUser}/repos`);
+            const {data} = await axios.get(`https://api.github.com/users/${searchUser}/repos`);
             let fetchedData = JSON.stringify(data)
             console.log(fetchedData)
             return fetchedData
