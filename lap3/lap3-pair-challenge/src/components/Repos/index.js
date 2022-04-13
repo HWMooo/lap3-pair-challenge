@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 export function Repos() {
 
     const repos = useSelector(state => state.repos);
-    // const repoList = repos.map((username, index) => <??? key={index} )
+    const dispatch = useDispatch();
+    dispatch(getRepos(repos))
 
     return(
         <>
