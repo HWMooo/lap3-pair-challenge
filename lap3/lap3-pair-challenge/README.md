@@ -8,7 +8,7 @@
 - From your fork, in terminal, use `git clone` to clone or download the repo
 - Open terminal and navigate to route of directory
   - Ensure you cd to lap3/lap3-pair-challenge
--Run `npm install`
+- Run `npm install`
 - In case this doesn't work follow these steps:
 - To install react
     - `npm install react react-dom`
